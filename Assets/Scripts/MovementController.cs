@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class BoltController: MonoBehaviour {
+public class MovementController: MonoBehaviour {
   public float speed;
 
   void Start() {
