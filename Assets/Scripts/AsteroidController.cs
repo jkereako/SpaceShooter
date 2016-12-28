@@ -14,16 +14,12 @@ public class AsteroidController: MonoBehaviour {
     if (other.CompareTag("Boundary")) {
       return;
     }
-
-    if (other.CompareTag("Player")) {
+    else if (other.CompareTag("Player")) {
       Instantiate(playerExplosion, transform.position, transform.rotation);
     }
 
     Instantiate(asteroidExplosion, transform.position, transform.rotation);
-    // Destroy the laser shot
     Destroy(other.gameObject);
-
-    // Destroy the asteroid
     Destroy(gameObject);
   }
 }
