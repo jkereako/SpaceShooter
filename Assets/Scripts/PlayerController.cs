@@ -2,6 +2,7 @@
 
 public class PlayerController: MonoBehaviour {
   public float speed;
+  public float tilt;
   public Boundry boundry;
 
   void FixedUpdate() {
@@ -17,6 +18,7 @@ public class PlayerController: MonoBehaviour {
 
     aRigidBody.velocity = movement * speed;
     aRigidBody.position = position;
+    aRigidBody.rotation = Quaternion.Euler(0.0f, 0.0f, aRigidBody.velocity.x * -tilt);
   }
 }
 
