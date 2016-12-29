@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(GameController))]
 public class AsteroidController: MonoBehaviour {
   public float tumbleValue;
   public GameObject asteroidExplosion;
