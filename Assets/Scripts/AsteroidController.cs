@@ -23,6 +23,7 @@ public class AsteroidController: MonoBehaviour {
       return;
     }
     else if (other.CompareTag("Player")) {
+      gameController.EndGame();
       Instantiate(playerExplosion, transform.position, transform.rotation);
     }
 
